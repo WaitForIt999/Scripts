@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DJ Giacomo | Taneční večery</title>
+  <meta name="description" content="Moderní párty a hudební produkce pro všechny typy večírků – DJ Giacomo."/>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+      line-height: 1.6;
+      padding-top: 80px; /* space for fixed header */
+      box-sizing: border-box;
+      overflow-x: hidden; /* prevent horizontal scroll */
+
+    }
+
+    header {
+      background-color: #003366;
+      color: #fff;
+      padding: 20px;
+      text-align: left;
+      display: flex;
+      justify-self: start;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+      font-size: 1.2em;
+      font-weight: 600;
+      border-bottom: 2px solid #ff5f2e;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 10px 20px;
+      top: 0;
+      left: 0;
+      
+      display: flex;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff5f2e;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+      flex: 1;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 10px;
+      flex: 2;
+      font-family: 'Arial', sans-serif;
+      font-size: 1em;
+      font-weight: 600;
+      text-align: center;
+      background-color: #003366;
+      padding: 10px 0;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      width: 100%;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: color 0.3s ease, background-color 0.3s ease;
+      font-family: 'Arial', sans-serif;
+      font-size: 1em;
+      text-transform: uppercase;
+      box-shadow: none;
+      box-sizing: border-box;
+      display: inline-block;
+      position: relative;
+      text-align: center;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #ff5f2e;
+      
+    }
+
+    .rotating-subtitle {
+      width: 100%;
+      text-align: right;
+      color: #3ee90a;
+      font-size: 1.1em;
+      margin-top: 10px;
+      font-style: italic;
+      transition: color 0.3s ease; 
+      font-weight: 600;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 140px 20px 40px; /* extra padding top due to fixed header */
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      margin: 20px auto;
+      max-width: 1200px;
+      box-sizing: border-box;
+      overflow: hidden; /* prevent overflow */
+
+    }
+    
+
+    section {
+      max-width: 300px;
+      margin: 20px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      
+    }
+
+    h2 {
+      color: #003366;
+      margin-bottom: 10px;
+      font-size: 1.5em;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+      letter-spacing: 1px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+      font-size: 1em;
+      color: #555;
+      text-align: justify;
+      font-family: 'Arial', sans-serif;
+      letter-spacing: 0.5px;
+
+    }
+
+    .call-to-action {
+      background-color: #7DFF55;
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 20px;
+      margin-top: 15px;
+      display: inline-block;
+      cursor: pointer;
+      text-decoration: none;
+      color: #000;
+      transition: background-color 0.3s ease;
+
+    }
+
+    .photo img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-top: 15px;
+    }
+
+    footer {
+      background-color: #003366;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      bottom: 0;
+    }
+
+    .socials img {
+      width: 40px;
+      height: 40px;
+      margin: 0 10px;
+
+    }
+
+    @media (max-width: 768px) {
+      header, .main {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>DJ Giacomo</h1>
+    <nav>
+      <a href="#">Úvod</a>
+      <a href="#">Ceník</a>
+      <a href="#">Galerie</a>
+      <a href="#">Kontakt</a>
+      <a href="#">Svatby</a>
+      <a href="#">Retro Párty</a>
+      <a href="#">Produkce akcí</a>
+      <a href="#" class="active">Taneční večery</a>
+    </nav>
+    <div class="rotating-subtitle" id="rotating-subtitle">Hudba. Energie. Zážitek.</div>
+  </header>
+
+  <main class="main">
+    <section>
+      <h2>Taneční večery na míru</h2>
+      <p>Hudba tvoří atmosféru každé akce – a ta by měla být laděná podle hostů, ne jen podle vkusu DJe.</p>
+      <p>Díky letům v rozhlasovém prostředí i stovkám akcí různých typů mám cit pro to, co lidé opravdu chtějí slyšet.</p>
+    </section>
+
+    <section>
+      <h2>Hudební výběr a vybavení</h2>
+      <p>Ve své knihovně mám stovky skladeb všech žánrů – od 70. let až po aktuální hity. Přání hostů beru jako výzvu.</p>
+      <p>Přivezu kvalitní zvuk i světla, vše připravené pro klubový zážitek nebo venkovní akci.</p>
+      <a href="#" class="call-to-action">Stačí zavolat nebo napsat!</a>
+    </section>
+
+    <section>
+      <h2>Kontakt</h2>
+      <p><strong>Telefon:</strong> <a href="tel:+420606727124">+420 606 727 124</a></p>
+      <p><strong>E-mail:</strong> <a href="mailto:info@djgiacomo.cz">info@djgiacomo.cz</a></p>
+      <div class="photo">
+        <img src="Kasan_QR_Code_kontakt.png" alt="QR Kód pro kontakt" width="150">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 DJ Giacomo | <a href="https://www.djgiacomo.cz" style="color:#7DFF55;">www.djgiacomo.cz</a></p>
+    <div class="socials">
+      <a href="https://www.facebook.com/djgiacomo.cz" target="_blank"><img src="facebook.png" alt="Facebook"></a>
+      <a href="https://www.instagram.com/djgiacomo.cz" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+      <a href="https://www.linkedin.com/in/djgiacomo" target="_blank"><img src="linkedin (1).png" alt="LinkedIn"></a>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const subtitles = [
+        "Hudba. Energie. Zážitek.",
+        "Vaše párty, moje vášeň.",
+        "DJ, který to cítí s vámi."
+      ];
+      let currentIndex = 0;
+      const subtitleElement = document.getElementById('rotating-subtitle');
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % subtitles.length;
+        subtitleElement.textContent = subtitles[currentIndex];
+      }, 4000);
+    });
+  </script>
+</body>
+</html>

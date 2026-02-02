@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style data-merge-styles="true"></style>
+  <style data-merge-styles="true"></style><style data-merge-styles="true"></style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Color Picker</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+    .color-swatch { width: 150px; height: 150px; margin: 20px auto; border: 2px solid #333; border-radius: 10px; }
+    .values { margin-top: 10px; font-size: 18px; }
+  </style>
+</head>
+<body data-new-gr-c-s-check-loaded="14.1234.0" data-gr-ext-installed="">
+  <h1>🎨 Color Picker</h1>
+  <input type="color" id="colorInput" value="#3498db">
+  <div class="color-swatch" id="colorSwatch" style="background-color: rgb(52, 152, 219);"></div>
+  <div class="values">
+    <div>HEX: <span id="hexValue">#3498db</span></div>
+    <div>RGB: <span id="rgbValue">52, 152, 219</span></div>
+  </div>
+
+  <script>
+    const colorInput = document.getElementById('colorInput');
+    const colorSwatch = document.getElementById('colorSwatch');
+    const hexValue = document.getElementById('hexValue');
+    const rgbValue = document.getElementById('rgbValue');
+
+    function hexToRgb(hex) {
+      const bigint = parseInt(hex.slice(1), 16);
+      const r = (bigint >> 16) & 255;
+      const g = (bigint >> 8) & 255;
+      const b = bigint & 255;
+      return `${r}, ${g}, ${b}`;
+    }
+
+    function updateColor() {
+      const color = colorInput.value;
+      colorSwatch.style.backgroundColor = color;
+      hexValue.textContent = color;
+      rgbValue.textContent = hexToRgb(color);
+    }
+
+    colorInput.addEventListener('input', updateColor);
+    updateColor();
+  </script>
+
+<script>
+
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				let sheets = [].slice.call(document.getElementsByTagName("link"));
+				let head = document.getElementsByTagName("head")[0];
+				for (let i = 0; i < sheets.length; ++i) {
+					let elem = sheets[i];
+					let parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					let rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						let url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			let protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			let address = protocol + window.location.host + window.location.pathname + '/ws';
+			let socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+
+</script>

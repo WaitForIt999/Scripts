@@ -1,0 +1,14 @@
+C:\Users\hry-h\OneDrive\Plocha\Coding\C#\politicalEntites\bin\Debug\net9.0\politicalEntites.exe
+C:\Users\hry-h\OneDrive\Plocha\Coding\C#\politicalEntites\bin\Debug\net9.0\politicalEntites.deps.json
+C:\Users\hry-h\OneDrive\Plocha\Coding\C#\politicalEntites\bin\Debug\net9.0\politicalEntites.runtimeconfig.json
+C:\Users\hry-h\OneDrive\Plocha\Coding\C#\politicalEntites\bin\Debug\net9.0\politicalEntites.dll
+C:\Users\hry-h\OneDrive\Plocha\Coding\C#\politicalEntites\bin\Debug\net9.0\politicalEntites.pdb
+C:\Users\hry-h\OneDrive\Plocha\Coding\C#\politicalEntites\obj\Debug\net9.0\politicalEntites.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hry-h\OneDrive\Plocha\Coding\C#\politicalEntites\obj\Debug\net9.0\politicalEntites.AssemblyInfoInputs.cache
+C:\Users\hry-h\OneDrive\Plocha\Coding\C#\politicalEntites\obj\Debug\net9.0\politicalEntites.AssemblyInfo.cs
+C:\Users\hry-h\OneDrive\Plocha\Coding\C#\politicalEntites\obj\Debug\net9.0\politicalEntites.csproj.CoreCompileInputs.cache
+C:\Users\hry-h\OneDrive\Plocha\Coding\C#\politicalEntites\obj\Debug\net9.0\politicalEntites.dll
+C:\Users\hry-h\OneDrive\Plocha\Coding\C#\politicalEntites\obj\Debug\net9.0\refint\politicalEntites.dll
+C:\Users\hry-h\OneDrive\Plocha\Coding\C#\politicalEntites\obj\Debug\net9.0\politicalEntites.pdb
+C:\Users\hry-h\OneDrive\Plocha\Coding\C#\politicalEntites\obj\Debug\net9.0\politicalEntites.genruntimeconfig.cache
+C:\Users\hry-h\OneDrive\Plocha\Coding\C#\politicalEntites\obj\Debug\net9.0\ref\politicalEntites.dll

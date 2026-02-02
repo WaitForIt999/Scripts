@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Color Picker</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+    .color-swatch { width: 150px; height: 150px; margin: 20px auto; border: 2px solid #333; border-radius: 10px; }
+    .values { margin-top: 10px; font-size: 18px; }
+  </style>
+</head>
+<body>
+  <h1>🎨 Color Picker</h1>
+  <input type="color" id="colorInput" value="#3498db">
+  <div class="color-swatch" id="colorSwatch"></div>
+  <div class="values">
+    <div>HEX: <span id="hexValue">#3498db</span></div>
+    <div>RGB: <span id="rgbValue"></span></div>
+  </div>
+
+  <script>
+    const colorInput = document.getElementById('colorInput');
+    const colorSwatch = document.getElementById('colorSwatch');
+    const hexValue = document.getElementById('hexValue');
+    const rgbValue = document.getElementById('rgbValue');
+
+    function hexToRgb(hex) {
+      const bigint = parseInt(hex.slice(1), 16);
+      const r = (bigint >> 16) & 255;
+      const g = (bigint >> 8) & 255;
+      const b = bigint & 255;
+      return `${r}, ${g}, ${b}`;
+    }
+
+    function updateColor() {
+      const color = colorInput.value;
+      colorSwatch.style.backgroundColor = color;
+      hexValue.textContent = color;
+      rgbValue.textContent = hexToRgb(color);
+    }
+
+    colorInput.addEventListener('input', updateColor);
+    updateColor(); // init
+  </script>
+</body>
+</html>
